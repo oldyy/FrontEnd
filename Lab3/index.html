@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Switcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="controls">
+    <button onclick="switchTo('flt')">Float версія</button>
+    <button onclick="switchTo('fx')">Flex версія</button>
+</div>
+
+<div id="layout-flt" class="layout-block active">
+
+    <div class="box">
+
+        <header class="header-area">
+            TEXT
+        </header>
+
+        <section class="content-float">
+            <div class="f-col p1">IMG</div>
+            <div class="f-col p2">IMG</div>
+            <div class="f-col p3">TEXT</div>
+            <div class="clearfix"></div>
+        </section>
+
+        <footer class="footer-area">
+            TEXT
+        </footer>
+
+    </div>
+
+</div>
+
+<div id="layout-fx" class="layout-block hidden">
+
+    <div class="box fx-box">
+
+        <header class="header-area">
+            TEXT
+        </header>
+
+        <section class="content-flex">
+            <div class="fx-item p1">IMG</div>
+            <div class="fx-item p2">IMG</div>
+            <div class="fx-item p3">TEXT</div>
+        </section>
+
+        <footer class="footer-area">
+            TEXT
+        </footer>
+
+    </div>
+
+</div>
+
+<script>
+    function switchTo(type) {
+        document.getElementById("layout-flt").classList.toggle("active", type === "flt");
+        document.getElementById("layout-flt").classList.toggle("hidden", type !== "flt");
+
+        document.getElementById("layout-fx").classList.toggle("active", type === "fx");
+        document.getElementById("layout-fx").classList.toggle("hidden", type !== "fx");
+    }
+</script>
+
+</body>
+</html>
