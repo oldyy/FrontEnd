@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Beloysov Dmytro IS-31</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Форма для заповнення (Варіант 9)</h2>
+
+<form id="mainForm">
+
+    <div class="form-row">
+        <label>ПІБ:</label>
+        <input type="text" id="pib" placeholder="Прізвище І.П.">
+    </div>
+
+    <div class="form-row">
+        <label>Варіант:</label>
+        <input type="text" id="variant" placeholder="ЧЧ">
+    </div>
+
+    <div class="form-row">
+        <label>Група:</label>
+        <input type="text" id="group" placeholder="TT-ЧЧ">
+    </div>
+
+    <div class="form-row">
+        <label>Факультет:</label>
+        <input type="text" id="faculty" placeholder="TTTT">
+    </div>
+
+    <div class="form-row">
+        <label>Дата народження:</label>
+        <input type="text" id="birth" placeholder="ЧЧ.ЧЧ.ЧЧЧЧ">
+    </div>
+
+    <div class="form-row">
+        <button type="button" id="sendBtn">Перевірити</button>
+    </div>
+
+</form>
+
+<h2 style="text-align:center; margin-top:40px;">Таблиця 6x6</h2>
+
+<div class="color-picker-wrapper">
+    <label>Оберіть колір:</label>
+    <input type="color" id="chosenColor" value="#ff0000">
+</div>
+
+<table id="grid"></table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
